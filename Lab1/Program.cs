@@ -15,7 +15,6 @@ public class Program
             int liczbaNog = int.Parse(Console.ReadLine());
             zwierzeta[i] = new Zwierze(nazwa, gatunek, liczbaNog);
         }
-        // Klonowanie trzeciego zwierzęcia
         zwierzeta[3] = new Zwierze(zwierzeta[2]);
         Console.WriteLine("Podaj nową nazwę dla sklonowanego zwierzęcia:");
         zwierzeta[3].Nazwa = Console.ReadLine();
@@ -32,7 +31,6 @@ public class Program
 
 public class Zwierze
 {
-    // Property Nazwa
     public string Nazwa { get; set; }
     private string gatunek;
     private int liczbaNog;
@@ -41,7 +39,6 @@ public class Zwierze
     public string GetGatunek() => gatunek;
     public int GetLiczbaNog() => liczbaNog;
 
-    // Konstruktor bezparametrowy
     public Zwierze()
     {
         Nazwa = "Rex";
@@ -50,7 +47,6 @@ public class Zwierze
         liczbaZwierzat++;
     }
 
-    // Konstruktor z trzema parametrami
     public Zwierze(string nazwa, string gatunek, int liczbaNog)
     {
         Nazwa = nazwa;
@@ -59,7 +55,6 @@ public class Zwierze
         liczbaZwierzat++;
     }
 
-    // Konstruktor kopiujący
     public Zwierze(Zwierze inne)
     {
         Nazwa = inne.Nazwa;
@@ -89,10 +84,8 @@ public class Zwierze
 
     public static int GetLiczbaZwierzat() => liczbaZwierzat;
 
-    // Destruktor (dla celów edukacyjnych)
     ~Zwierze()
     {
-        // W .NET destruktory są rzadko używane, służą do zwalniania niezarządzanych zasobów
     }
 }
 
