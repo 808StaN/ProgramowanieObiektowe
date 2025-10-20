@@ -47,7 +47,7 @@ public class Waz : Zwierze
 
 public static class Helpers
 {
-    // "Global" helper to call daj_glos on any Zwierze
+    
     public static void powiedz_cos(Zwierze z)
     {
         z.daj_glos();
@@ -95,13 +95,13 @@ public class Program
 {
     public static void Main()
     {
-        // 7. Create one object of each: Zwierze, Pies, Kot, Waz
+       
         Zwierze zwyk = new Zwierze("Zwierzak");
         Pies pies = new Pies("Burek");
         Kot kot = new Kot("Mruczek");
         Waz waz = new Waz("Kaa");
 
-        // Call powiedz_cos and print runtime type
+        
         Helpers.powiedz_cos(zwyk);
         Console.WriteLine($"Typ: {zwyk.GetType()}");
 
@@ -115,15 +115,14 @@ public class Program
         Console.WriteLine($"Typ: {waz.GetType()}");
 
         Console.WriteLine();
-        // 10. Create Piekarz and call Pracuj
+       
         Piekarz piekarz = new Piekarz();
         piekarz.Pracuj();
 
-        // 11. Trying to create Pracownik would fail at compile time because it's abstract:
-        // Pracownik p = new Pracownik(); // <- error: cannot create an instance of the abstract class 'Pracownik'
+      
 
         Console.WriteLine();
-        // 15. Create A, B, C and observe constructor order
+        
         A a = new A();
         B b = new B();
         C c = new C();
