@@ -151,7 +151,7 @@ namespace Laboratorium6
             Console.WriteLine("Dodano studenta.");
         }
 
-        // Zadanie 8 (z walidacją)
+        // Zadanie 8
         static void AddOcena(SqlConnection connection, Ocena ocena)
         {
             if (!CzyOcenaPrawidlowa(ocena.Wartosc))
