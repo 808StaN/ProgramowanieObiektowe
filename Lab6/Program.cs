@@ -198,9 +198,9 @@ namespace Laboratorium6
         // Pomocnicza funkcja do walidacji (Zadanie 8 i 10)
         private static bool CzyOcenaPrawidlowa(double v)
         {
-            // Dozwolone: 2.0, 3.0, 3.5, 4.0, 4.5, 5.0
+            
             if (v < 2.0 || v > 5.0 || v == 2.5) return false;
-            if ((v * 10) % 5 != 0) return false; // Sprawdza czy końcówka to .0 lub .5
+            if ((v * 10) % 5 != 0) return false;
             return true;
         }
     }
